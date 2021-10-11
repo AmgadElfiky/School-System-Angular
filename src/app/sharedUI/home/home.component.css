@@ -1,0 +1,89 @@
+.container {
+  margin-top: 50px;
+}
+
+.Border-animation {
+  position: relative;
+  background: linear-gradient(0deg, #000, #272727);
+  padding: 30px;
+}
+
+.Border-animation:before,
+.Border-animation:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0049, #0000ff, #00ff00,
+      #ffff00, #00e1ff, #ff00d4, #000, #ffffff, #00ff00,
+      #00ff00, #fb0049, #0000ff, #00ff00, #ffff00,
+      #00e1ff, #ff00d4, #000, #ffffff);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: rain 20s linear infinite;
+}
+
+.Border-animation::after {
+  filter: blur(20px);
+}
+
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+h1 {
+  text-align: center;
+  animation: text 5s infinite;
+
+}
+
+@keyframes text {
+  0% {
+    color: #ffffff;
+  }
+
+  20% {
+    color: #0000ff;
+  }
+
+  40% {
+    color: #ffff00;
+  }
+
+  60% {
+    color: #fb0049;
+  }
+
+  80% {
+    color: #00e1ff;
+  }
+
+  100% {
+    color: #ffffff;
+  }
+}
+
+.container .teacher .t2 {
+  margin-top: 30px;
+}
+
+.btn {
+  transition: .5s all ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+

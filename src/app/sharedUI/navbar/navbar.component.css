@@ -1,0 +1,22 @@
+.navbar li {
+    margin: 0px 10px;
+}
+
+.navbar .nav-item .nav-link a {
+  color: snow;
+}
+.navbar li a {
+  transition: all .7s ease-in-out;
+
+}
+
+.navbar li a:hover {
+  border-radius: 20px;
+  background-color: red;
+  color: black;
+}
+
+.navbar a img{
+  width: 180px;
+  height: auto;
+}

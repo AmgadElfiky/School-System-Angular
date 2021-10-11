@@ -1,0 +1,36 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Amgad Fathy",
+      "course": "SoftWare Engineer"
+    },
+    {
+      "name": "Ahmed Elfiky",
+      "course": "Civil Engineer",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Akmal Fathy Elfiky",
+      "course": "Architecture"
+    },
+    {
+      "id": 4,
+      "name": "Aymen Fathy",
+      "course": "Architecture"
+    },
+    {
+      "name": "Mohamed Elfiky k",
+      "course": "Hand Made",
+      "id": 5
+    }
+  ],
+  "student": [
+    {
+      "name": "dasasd",
+      "level": "sad",
+      "id": 1
+    }
+  ]
+}

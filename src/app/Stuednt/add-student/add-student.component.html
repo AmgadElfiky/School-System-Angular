@@ -1,0 +1,29 @@
+<h1 class="text text-center ">Here You Are In Add Student Page</h1>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label> Student Name </label>
+                <input #teacherName='ngModel' required [(ngModel)]="obj.name" type="text" class="form-control"
+                    placeholder="Teacher Name">
+                <div *ngIf="teacherName.touched && teacherName.invalid" class="alert alert-danger">
+                    Please Enter Valid Student Name
+                </div>
+            </div>
+            <div class="form-group">
+                <label> Course Name </label>
+                <input #teacherCourse='ngModel' required [(ngModel)]="obj.level" type="text" class="form-control"
+                    placeholder="Course Name">
+                <div *ngIf="teacherCourse.touched && teacherCourse.invalid" class="alert alert-danger">
+                    Please Enter Valid Course Level
+                </div>
+            </div>
+            <div *ngIf = "teacherCourse.valid && teacherName.valid" class="submit text-center">
+                <button (click) = "save()" class="btn btn-primary  mt-4 ">Add Student</button>
+            </div>
+            <div *ngIf = "teacherCourse.invalid && teacherName.invalid " class="submit text-center">
+                <button disabled class="btn btn-primary  mt-4 ">Modify Student</button>
+            </div>
+        </div>
+    </div>
+</div>

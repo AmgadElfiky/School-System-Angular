@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~E:\Study\Instant Web\Projects\Course\Project 4\node_modules\bootstrap\dist\css\bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  background: url(/assets/img/home.jpg);
+  background-size: cover;
+  color: snow;
+  font-family: 'Raleway', sans-serif;
+}

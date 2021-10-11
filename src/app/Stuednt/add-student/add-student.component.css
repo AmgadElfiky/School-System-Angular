@@ -1,0 +1,28 @@
+.card .card-body label {
+  color: snow;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #333;
+}
+
+.card .card-body button {
+  color: snow;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  height: 45px;
+  box-shadow: 4px 4px 10px 0 rgba(0, 255, 255, 0.548), 0 6px 20px 0 rgba(255, 255, 255, 0.568);
+  width: 30%;
+  transition: 1s all ease-in-out;
+}
+
+h1 {
+  color: rgb(0, 255, 213);
+  font-weight: bold;
+}
+
+.card .card-body button:first-of-type:hover{
+  width: 100%;
+}

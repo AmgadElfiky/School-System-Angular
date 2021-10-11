@@ -1,0 +1,29 @@
+<h1 class="text text-center ">Here You Are In Update student Page</h1>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label> student Name </label>
+                <input #studentName='ngModel' required [(ngModel)]="obj.name" type="text" class="form-control"
+                    placeholder="student Name">
+                <div *ngIf="studentName.touched && studentName.invalid" class="alert alert-danger">
+                    Please Enter Valid student Name
+                </div>
+            </div>
+            <div class="form-group">
+                <label> Course Name </label>
+                <input #studentCourse='ngModel' required [(ngModel)]="obj.level" type="text" class="form-control"
+                    placeholder="Course Name">
+                <div *ngIf="studentCourse.touched && studentCourse.invalid" class="alert alert-danger">
+                    Please Enter Valid Course Name
+                </div>
+            </div>
+            <div *ngIf = "studentCourse.valid && studentName.valid">
+                <button (click)="update()" class="btn btn-primary btn-block mt-4">Modify student</button>
+            </div>
+            <div *ngIf = "studentCourse.invalid && studentName.invalid">
+                <button disabled class="btn btn-primary btn-block mt-4">Modify student</button>
+            </div>
+        </div>
+    </div>
+</div>

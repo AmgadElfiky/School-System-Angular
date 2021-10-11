@@ -1,0 +1,21 @@
+<div class="container col-md-8 ">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Course</th>
+                <th scope="col" colspan="2" class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let teacher of allData">
+                <th scope="row">{{teacher.id}}</th>
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.course}}</td>
+                <td class="text-center"><a routerLink="/update/{{teacher.id}}" class="btn btn-success"> Edit </a></td>
+                <td class="text-center"><button (click) = "remove(teacher.id)" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
