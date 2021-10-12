@@ -4,25 +4,33 @@
         <div class="card-body">
             <div class="form-group">
                 <label> Student Name </label>
-                <input #teacherName='ngModel' required [(ngModel)]="obj.name" type="text" class="form-control"
-                    placeholder="Teacher Name">
-                <div *ngIf="teacherName.touched && teacherName.invalid" class="alert alert-danger">
+                <input #StudentName='ngModel' required [(ngModel)]="obj.name" type="text" class="form-control"
+                    placeholder="Student Name">
+                <div *ngIf="StudentName.touched && StudentName.invalid" class="alert alert-danger">
                     Please Enter Valid Student Name
                 </div>
             </div>
             <div class="form-group">
                 <label> Course Name </label>
-                <input #teacherCourse='ngModel' required [(ngModel)]="obj.level" type="text" class="form-control"
+                <input #courseName='ngModel' required [(ngModel)]="obj.courseName" type="text" class="form-control"
                     placeholder="Course Name">
-                <div *ngIf="teacherCourse.touched && teacherCourse.invalid" class="alert alert-danger">
+                <div *ngIf="courseName.touched && courseName.invalid" class="alert alert-danger">
+                    Please Enter Valid Course Name
+                </div>
+            </div>
+            <div class="form-group">
+                <label> Course Level </label>
+                <input #courseLevel='ngModel' required [(ngModel)]="obj.level" type="text" class="form-control"
+                    placeholder="Course Level">
+                <div *ngIf="courseLevel.touched && courseLevel.invalid" class="alert alert-danger">
                     Please Enter Valid Course Level
                 </div>
             </div>
-            <div *ngIf = "teacherCourse.valid && teacherName.valid" class="submit text-center">
+            <div *ngIf = "courseName.valid && StudentName.valid && courseLevel.valid" class="submit text-center">
                 <button (click) = "save()" class="btn btn-primary  mt-4 ">Add Student</button>
             </div>
-            <div *ngIf = "teacherCourse.invalid && teacherName.invalid " class="submit text-center">
-                <button disabled class="btn btn-primary  mt-4 ">Modify Student</button>
+            <div *ngIf = "courseName.invalid && StudentName.invalid && courseLevel.invalid" class="submit text-center">
+                <button disabled class="btn btn-primary  mt-4 ">Add Student</button> 
             </div>
         </div>
     </div>
